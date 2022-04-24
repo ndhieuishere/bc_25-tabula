@@ -1,0 +1,106 @@
+header {
+  position: relative;
+  z-index: 1;
+  .navbar-brand {
+    img {
+      margin-top: -15px;
+      width: 80px;
+      margin-left: -50px;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      padding-bottom: 10px;
+      margin-right: -25px;
+      .nav-link {
+        @include textStyle($fs-2, $fw-2, $color-black-1);
+        margin: 0 20px;
+        &:hover {
+          color: $color-pink-1 !important;
+          transition: 0.5s all;
+        }
+      }
+      .dot1::after {
+        @include dot($left-1);
+      }
+      .dot1:hover::after {
+        transform: scale(1.1);
+      }
+      .dot2::after {
+        @include dot($left-2);
+      }
+      .dot2:hover::after {
+        transform: scale(1.1);
+      }
+      .dot3::after {
+        @include dot($left-3);
+      }
+      .dot3:hover::after {
+        transform: scale(1.1);
+      }
+      .dot4::after {
+        @include dot($left-4);
+      }
+      .dot4:hover::after {
+        transform: scale(1.1);
+      }
+      .dot5::after {
+        @include dot($left-5);
+      }
+      .dot5:hover::after {
+        transform: scale(1.1);
+      }
+
+      .active {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: 5;
+          bottom: 10px;
+          margin-left: -170px;
+          left: 49.6%;
+          pointer-events: none;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          transition: all 100ms ease-out;
+          background-color: #b61984;
+          cursor: pointer;
+          transition: all 0.5s;
+        }
+        &:hover::after {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .nav-item {
+      .btn {
+        span {
+          @include textStyle($fs-2, $fw-1, $color-white-1);
+        }
+      }
+      .btn:hover {
+        background: transparent;
+        transition: all 0.5s;
+        border-color: $color-pink-1;
+        i,
+        span {
+          color: #b61984 !important;
+        }
+      }
+      .socials__icon {
+        color: $color-black-1;
+        i {
+          @include icons(
+            $fs-2,
+            $padding-left-3,
+            $padding-top-1,
+            $transition,
+            $color-pink-1
+          );
+        }
+      }
+    }
+  }
+}

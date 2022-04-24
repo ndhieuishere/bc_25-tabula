@@ -1,0 +1,50 @@
+#customers {
+  background-color: $color-violet-1;
+  padding-bottom: 75px;
+  .container {
+    .wrapper {
+      flex-wrap: $wrap;
+      row-gap: 40px;
+      .card {
+        width: 260px;
+        z-index: 1;
+        border: none;
+        height: 100%;
+        text-align: center;
+        border-radius: 15px;
+        .card-img-top {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          width: 100%;
+          transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+          &:hover {
+            transform: perspective(500px) scale3d(1.05, 1.05, 1.05);
+          }
+        }
+        .card-body {
+          line-height: 1;
+          h4 {
+            @include textStyle($fs-2, $fw-1, $color-pink-1);
+          }
+          h3 {
+            @include textStyle($fs-title, $fw-2, $color-black-1);
+          }
+          p {
+            @include textStyle($fs-2, $fw-3, $color-black-1);
+          }
+        }
+        &:hover {
+          box-shadow: 0 30px 30px -10px #c0c0c0;
+          transition: all 500ms ease-in-out;
+        }
+      }
+    }
+  }
+  .customers-bg {
+    z-index: 0;
+    @include bgCover($position, $width, $top-3);
+    img {
+      width: 100%;
+    }
+  }
+}

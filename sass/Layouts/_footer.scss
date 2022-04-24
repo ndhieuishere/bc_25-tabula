@@ -1,0 +1,79 @@
+footer {
+  img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    top: 2000px;
+  }
+  .col-md-3 {
+    z-index: 2;
+    h1 {
+      @include textStyle($fs-footer, $fw-1, $color-white-1);
+      margin-bottom: 25px;
+    }
+    span {
+      padding: 0.2rem;
+      margin-top: 15px;
+      @include textStyle($fs-2, $fw-4, #fffff7);
+    }
+    ul {
+      list-style-type: none;
+      padding-top: 5px;
+      li {
+        @include textStyle($fs-2, $fw-4, #fffff7);
+      }
+      hr {
+        margin: 10px 0;
+      }
+    }
+    .input-email {
+      input::-webkit-input-placeholder {
+        font-size: 14px;
+        line-height: 3;
+        text-align: center;
+        color: $color-white-1;
+        caret-color: red;
+      }
+      input {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: $border-rad;
+        transition: all 300ms ease;
+        padding: 12px 10px;
+        background-color: transparent;
+        text-align: center;
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 4px 0 rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    .btn {
+      padding: 15px 80px;
+      background-color: $color-white-1;
+      font-size: $fs-1;
+      @include textStyle($fs-2, $fw-4, $color-black-1);
+      transition: $transition;
+      &:hover {
+        background-color: transparent;
+        color: $color-white-1 !important;
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+    }
+  }
+  .footer__icon {
+    margin-top: 15px;
+    .socials__icon {
+      color: $color-white-1;
+      i {
+        @include icons(
+          $fs-2,
+          $padding-left-3,
+          $padding-top-1,
+          $transition,
+          $color-black-1
+        );
+      }
+    }
+  }
+}

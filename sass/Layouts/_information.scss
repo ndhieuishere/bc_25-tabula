@@ -1,0 +1,174 @@
+#information {
+  padding-top: 10px;
+  padding-left: 170px;
+  z-index: 1;
+  margin-bottom: 100px;
+  .col-md-6 {
+    z-index: 1;
+  }
+  .infor-bg {
+    margin-left: -1295px;
+    z-index: 0;
+
+    img {
+      @include bgCover($position, $width, $top-4);
+    }
+  }
+
+  .infor-right {
+    background-color: #fff;
+    box-shadow: 0 30px 30px -10px #c0c0c0;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 500px;
+    z-index: 1;
+    h1 {
+      @include textStyle($fs-infor, $fw-1, $color-black-1);
+    }
+    .d-flex {
+      .infor-name {
+        @include inputInfo($position-2, $padding, $padding-left-1, $border-rad);
+        .fas {
+          position: absolute;
+          top: 17px;
+          left: 15px;
+          color: $color-pink-1;
+        }
+        input {
+          @include inputBox(
+            $border-rad,
+            $infor-height,
+            $width-1,
+            $padding-left-2,
+            $transition,
+            $border
+          );
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+          }
+        }
+        & input::-webkit-input-placeholder {
+          font-size: 15px;
+          line-height: 3;
+        }
+      }
+
+      .infor-email {
+        @include inputInfo($position-2, $padding, $padding-left-1, $border-rad);
+        .fas {
+          position: absolute;
+          top: 17px;
+          left: 15px;
+          color: $color-pink-1;
+        }
+        input {
+          @include inputBox(
+            $border-rad,
+            $infor-height,
+            $width-1,
+            $padding-left-2,
+            $transition,
+            $border
+          );
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+          }
+        }
+        & input::-webkit-input-placeholder {
+          font-size: 15px;
+          line-height: 3;
+        }
+      }
+    }
+    // not done dropdown menu
+    .dropdown {
+      position: $position-2;
+      padding: 10px 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      margin-left: 5px;
+      margin-right: 54px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      .dropdown-title {
+        .fas {
+          position: $position;
+          left: 7px;
+          bottom: 15px;
+          color: $color-pink-1;
+          &::after {
+            position: $position;
+            font-family: "Font Awesome 5 Free";
+            content: "\f107";
+            left: 440px;
+          }
+        }
+        .course {
+          padding-left: 35px;
+          @include textStyle($fs-1, $fw-4, $color-input-1);
+          cursor: pointer;
+        }
+      }
+    }
+    .option {
+      top: 182px;
+      list-style: none;
+      position: absolute;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      left: 4px;
+      z-index: 1;
+      background-color: #fff;
+      display: none;
+      li {
+        color: #757575;
+        width: 475px;
+        padding-left: 36px;
+        padding-bottom: 14px;
+        &:hover {
+          color: $color-pink-1;
+          transition: all 0.75s;
+        }
+      }
+    }
+    .mess {
+      .fas {
+        left: 15px;
+        top: 193px;
+        position: $position;
+        color: $color-pink-1;
+      }
+      textarea {
+        width: 470px;
+        padding-top: 5px;
+        padding-left: 30px;
+        margin-left: 10px;
+        border-radius: 20px;
+        border: $border;
+        transition: $transition;
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    button {
+      margin-top: 40px;
+      padding: 11px;
+      width: 200px;
+      margin-left: 11px;
+      transition: 0.4s;
+      span {
+        font-size: $fs-2;
+      }
+      &:hover {
+        background: transparent;
+        border: 1px solid $color-pink-1 !important;
+        span {
+          color: $color-pink-1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.btn {
+  background-color: $color-pink-1;
+  padding: 10px 10px 10px 5px;
+  border-radius: 50px;
+  @include textStyle($fs-2, $fw-1, $color-white-1);
+  .fa-phone {
+    font-size: $fs-2 !important;
+    padding: 0px 8px;
+  }
+}
+
+.btn2 {
+  @extend .btn;
+  margin-top: 40px;
+  padding: 11px;
+  width: 200px;
+  margin-left: 11px;
+  border:none;
+}
