@@ -38,12 +38,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- js -->
-    <link rel="stylesheet" href="./javascript/main.js" />
   </head>
   <body>
-    <header>
-      <nav class="container navbar navbar-expand-md">
+    <header id="navbar">
+      <nav class="container navbar navbar-expand-md navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#">
           <img src="./images/crest.png" alt="Logo" />
@@ -276,7 +274,7 @@
                 ></textarea>
               </span>
             </div>
-            <ul class="option">
+            <ul class="option" id="myDropdown">
               <li class="course-1">English</li>
               <li class="course-2">French</li>
               <li class="course-3">Spanish</li>
@@ -327,10 +325,14 @@
           <div>
             <h1>Quick Links</h1>
             <ul>
-              <li>Home</li><hr>
-              <li>Courses</li><hr>
-              <li>Schedule</li><hr>
-              <li>Blog</li><hr>
+              <li>Home</li>
+              <hr />
+              <li>Courses</li>
+              <hr />
+              <li>Schedule</li>
+              <hr />
+              <li>Blog</li>
+              <hr />
             </ul>
           </div>
         </div>
@@ -338,17 +340,25 @@
           <div>
             <h1>About</h1>
             <ul>
-              <li>About us</li><hr>
-              <li>Events</li><hr>
-              <li>Get Quote</li><hr>
-              <li>Contact</li><hr>
+              <li>About us</li>
+              <hr />
+              <li>Events</li>
+              <hr />
+              <li>Get Quote</li>
+              <hr />
+              <li>Contact</li>
+              <hr />
             </ul>
           </div>
         </div>
         <div class="col-md-3">
           <h1>Newsletter</h1>
-          <div class="input-email"><input type="text" placeholder="Your email" /></div>
-          <div style="padding: 15px 0px;"><button class="btn">SUBSCRIBE</button></div>
+          <div class="input-email">
+            <input type="text" placeholder="Your email" />
+          </div>
+          <div style="padding: 15px 0px">
+            <button class="btn">SUBSCRIBE</button>
+          </div>
         </div>
       </div>
       <div class="footer-bg">
@@ -372,5 +382,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- js -->
+    <script src="./javascript/main.js"></script>
   </body>
 </html>

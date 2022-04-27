@@ -120,7 +120,7 @@
       left: 4px;
       z-index: 1;
       background-color: #fff;
-      display: none;
+      opacity: 0;
       li {
         color: #757575;
         width: 475px;
@@ -131,6 +131,9 @@
           transition: all 0.75s;
         }
       }
+    }
+    .show {
+      opacity: 1!important;
     }
     .mess {
       .fas {

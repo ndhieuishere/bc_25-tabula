@@ -8,7 +8,12 @@
 
 header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+header .scroll-header {
+  height: 80px !important;
+  background-color: #fff !important;
 }
 
 header .navbar-brand img {
@@ -468,7 +473,7 @@ header .navbar-collapse .nav-item .socials__icon i:hover {
   left: 4px;
   z-index: 1;
   background-color: #fff;
-  display: none;
+  opacity: 0;
 }
 
 #information .infor-right .option li {
@@ -481,6 +486,10 @@ header .navbar-collapse .nav-item .socials__icon i:hover {
 #information .infor-right .option li:hover {
   color: #b61984;
   transition: all 0.75s;
+}
+
+#information .infor-right .show {
+  opacity: 1 !important;
 }
 
 #information .infor-right .mess .fas {
@@ -562,6 +571,11 @@ footer .col-md-3 ul li {
   color: #fffff7 !important;
   font-size: 0.75rem;
   font-weight: 300;
+  cursor: pointer;
+}
+
+footer .col-md-3 ul li:hover {
+  opacity: 0.8;
 }
 
 footer .col-md-3 ul hr {
